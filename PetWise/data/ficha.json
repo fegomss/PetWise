@@ -1,0 +1,20 @@
+{
+  "Cliente": {
+    "Nome": "Cliente de demonstração",
+    "Contato": "Não informado",
+    "E-mail": "cliente@example.com"
+  },
+  "Animal": {
+    "Nome": "Luna",
+    "Espécie": "Canina",
+    "Raça": "Sem raça definida",
+    "Idade": "3 anos",
+    "Sexo": "Fêmea",
+    "Peso": "12 kg"
+  },
+  "Atendimento": {
+    "Última consulta": "10/11/2026",
+    "Vacinação": "Registro de demonstração",
+    "Observações": "Dados fictícios para demonstração."
+  }
+}
