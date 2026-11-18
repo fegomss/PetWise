@@ -99,7 +99,7 @@ function recordFromForm(values) {
         criadoEm: new Date().toISOString(),
         Cliente: { Nome: text(values.clientName), Contato: text(values.clientContact), "E-mail": text(values.clientEmail) },
         Animal: { Nome: text(values.animalName), "Espécie": text(values.animalSpecies), "Raça": text(values.animalBreed), Idade: text(values.animalAge), Sexo: text(values.animalSex), Peso: text(values.animalWeight) },
-        Atendimento: { "Última consulta": formatDate(values.lastAppointment), Vacinação: text(values.vaccination), Observações: text(values.notes) }
+        Atendimento: { "Última consulta": formatDate(values.lastAppointment), Observações: text(values.notes) }
     };
 }
 

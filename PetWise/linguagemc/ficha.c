@@ -22,7 +22,6 @@ typedef struct {
 
 typedef struct {
     const char *ultima_consulta;
-    const char *vacinacao;
     const char *observacoes;
 } Atendimento;
 
@@ -95,7 +94,6 @@ int main(void) {
     };
     const Atendimento atendimento = {
         "10/11/2026",
-        "Registro de demonstração",
         "Dados fictícios para demonstração."
     };
 
@@ -118,7 +116,6 @@ int main(void) {
     escrever_campo_json(arquivo, "Peso", animal.peso, 1);
     fputs("  },\n  \"Atendimento\": {\n", arquivo);
     escrever_campo_json(arquivo, "Última consulta", atendimento.ultima_consulta, 0);
-    escrever_campo_json(arquivo, "Vacinação", atendimento.vacinacao, 0);
     escrever_campo_json(arquivo, "Observações", atendimento.observacoes, 1);
     fputs("  }\n}\n", arquivo);
 
