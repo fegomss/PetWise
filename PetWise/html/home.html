@@ -21,7 +21,8 @@
             <nav class="navigation">
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre o projeto</a>
-                <a href="#ficha">Ficha técnica</a>
+                <a href="#ficha">Fichas</a>
+                <a href="#cadastro">Novo cadastro</a>
                 <a href="#equipe">Nossa equipe</a>
             </nav>
 
@@ -98,13 +99,89 @@
                 <div class="section-heading">
                     <span class="section-label">EXEMPLO DE CADASTRO</span>
                     <h2>Ficha técnica</h2>
-                    <p>Dados demonstrativos de cliente, animal e atendimento.</p>
+                    <p>Consulte o exemplo e os cadastros salvos neste navegador.</p>
                 </div>
 
                 <div class="record-grid" id="record-grid" aria-live="polite">
                     <p>Carregando ficha técnica...</p>
                 </div>
 
+                <div class="saved-records" aria-labelledby="saved-records-title">
+                    <div class="saved-records-heading">
+                        <div>
+                            <span class="section-label">CADASTROS SALVOS</span>
+                            <h3 id="saved-records-title">Fichas cadastradas</h3>
+                        </div>
+                        <label for="record-select">Selecionar ficha
+                            <select id="record-select">
+                                <option value="">Nenhum cadastro salvo</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div id="saved-records-list" class="saved-records-list" aria-live="polite"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="registration section" id="cadastro">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label">NOVO CADASTRO</span>
+                    <h2>Registrar tutor, animal e atendimento</h2>
+                    <p>Os dados ficam salvos neste navegador para serem consultados depois.</p>
+                </div>
+
+                <form class="registration-form" id="registration-form">
+                    <fieldset>
+                        <legend>Dados do cliente</legend>
+                        <label for="client-name">Nome completo</label>
+                        <input id="client-name" name="clientName" required maxlength="160" autocomplete="name">
+                        <label for="client-contact">Contato</label>
+                        <input id="client-contact" name="clientContact" maxlength="160" autocomplete="tel">
+                        <label for="client-email">E-mail</label>
+                        <input id="client-email" name="clientEmail" type="email" maxlength="160" autocomplete="email">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dados do animal</legend>
+                        <label for="animal-name">Nome do animal</label>
+                        <input id="animal-name" name="animalName" required maxlength="160">
+                        <label for="animal-species">Espécie</label>
+                        <select id="animal-species" name="animalSpecies" required>
+                            <option value="">Selecione</option>
+                            <option>Cachorro</option>
+                            <option>Gato</option>
+                            <option>Ave</option>
+                            <option>Outro</option>
+                        </select>
+                        <label for="animal-breed">Raça</label>
+                        <input id="animal-breed" name="animalBreed" maxlength="160">
+                        <label for="animal-age">Idade</label>
+                        <input id="animal-age" name="animalAge" maxlength="80" inputmode="numeric">
+                        <label for="animal-sex">Sexo</label>
+                        <select id="animal-sex" name="animalSex">
+                            <option value="">Não informado</option>
+                            <option>Fêmea</option>
+                            <option>Macho</option>
+                        </select>
+                        <label for="animal-weight">Peso</label>
+                        <input id="animal-weight" name="animalWeight" maxlength="40" placeholder="Ex.: 12 kg">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Atendimento</legend>
+                        <label for="last-appointment">Última consulta</label>
+                        <input id="last-appointment" name="lastAppointment" type="date">
+                        <label for="vaccination">Vacinação</label>
+                        <input id="vaccination" name="vaccination" maxlength="200">
+                        <label for="notes">Observações</label>
+                        <textarea id="notes" name="notes" rows="4" maxlength="1000"></textarea>
+                    </fieldset>
+
+                    <button class="btn" type="submit">Salvar cadastro</button>
+                    <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+                </form>
             </div>
         </section>
 
@@ -141,7 +218,7 @@
             </a>
 
             <p>
-                Projeto acadêmico de desenvolvimento de software.
+                Projeto acadêmico da UniIalo.
             </p>
 
             <span>
